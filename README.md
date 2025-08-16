@@ -1,35 +1,23 @@
 # 🎂 Magical Birthday Gift Website 🦋
 
 A personalized, interactive birthday gift website featuring a beautiful Avatar-inspired theme with glowing butterflies, floating flowers, and magical animations.
+<<<<<<< HEAD
+# � Magical Birthday Gift Website 🦋
+
+# Birthday_wishes
+An interactive birthday gift website filled with memories💖🎉
+
+A personalized, interactive birthday gift website featuring a beautiful Avatar-inspired theme with glowing butterflies, floating flowers, and magical animations.
 
 ## ✨ Features
 
 ### 🌸 Stage 1: Friendship Quiz
-- **5 personalized questions** about your friendship
-- **3-minute countdown timer** with visual feedback
-- **Progressive scoring** - need 3/5 correct to advance
-- **Retry functionality** if score is too low
-- **Smooth transitions** between questions
 
 ### 🧩 Stage 2: Interactive Puzzle
-- **3x3 jigsaw puzzle** with numbered pieces
-- **2-minute timer** for completion
-- **Click-based gameplay** - click correct pieces in order
-- **Visual feedback** for correct/incorrect selections
-- **Retry option** if time runs out
 
 ### 💌 Stage 3: Personal Message & Memory Gallery
-- **Heartfelt birthday message** with typewriter effect
-- **Auto-scrolling image carousels** on both sides
-- **Beautiful memory gallery** showcasing shared moments
-- **"Start Again" button** to relive the experience
 
 ### 🎵 Bonus Features
-- **Background music** with mute/unmute toggle
-- **Progress saving** using browser localStorage
-- **Responsive design** for all devices
-- **Loading animations** between stages
-- **Magical visual effects** throughout
 
 ## 🚀 How to Use
 
@@ -83,35 +71,15 @@ Replace the audio source in `index.html`:
 ## 🎭 Visual Theme
 
 The website features a magical Avatar-inspired design with:
-- **Gradient backgrounds** in purple and blue tones
-- **Animated butterflies** fluttering across the screen
-- **Floating flowers** with gentle animations
-- **Glowing light particles** creating a dreamy atmosphere
-- **Glassmorphism effects** with backdrop blur
-- **Smooth transitions** and hover animations
 
 ## 📱 Responsive Design
 
-- **Mobile-friendly** layout that works on all devices
-- **Adaptive grid systems** for quiz options and puzzle
-- **Touch-friendly** interactions for mobile users
-- **Optimized spacing** for different screen sizes
 
 ## 🔧 Technical Details
 
-- **Pure HTML/CSS/JavaScript** - no external dependencies
-- **CSS Grid and Flexbox** for modern layouts
-- **CSS Animations** for smooth transitions
-- **Local Storage** for progress persistence
-- **Event-driven architecture** for clean code structure
 
 ## 🌟 Browser Compatibility
 
-- **Chrome** (recommended)
-- **Firefox**
-- **Safari**
-- **Edge**
-- **Mobile browsers**
 
 ## 💡 Tips for Best Experience
 
@@ -124,22 +92,16 @@ The website features a magical Avatar-inspired design with:
 ## 🎁 Making It Special
 
 To make this gift truly personal:
-- **Add real photos** from your friendship
-- **Customize questions** with inside jokes
-- **Write a heartfelt message** that's meaningful to your friend
-- **Choose background music** that reminds you of them
-- **Test thoroughly** to ensure everything works perfectly
 
 ## 📞 Support
 
 If you need help customizing or have questions:
-- Check that all files are in the same folder
-- Ensure your web browser supports modern JavaScript
-- Try refreshing the page if animations don't load
-- Check browser console for any error messages
 
----
 
 **Made with 💖 and ✨ for a special friend's birthday!**
 
 *This website creates a magical, interactive experience that celebrates friendship and creates lasting memories.* 
+=======
+# Birthday_wishes
+An interactive birthday gift website filled with memories💖🎉
+>>>>>>> b4c7ba5efe03479b41c09f1ae2d57818af9abe20
