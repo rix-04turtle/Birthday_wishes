@@ -1,0 +1,121 @@
+.welcome-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(20, 20, 30, 0.95);
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.welcome-content {
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	color: #fff;
+	font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.welcome-date {
+	font-size: 2.2rem;
+	font-weight: bold;
+	margin-bottom: 1.2rem;
+	letter-spacing: 2px;
+}
+
+.welcome-message {
+	font-size: 1.4rem;
+	margin-bottom: 2rem;
+	font-weight: 500;
+}
+
+.welcome-btn {
+	background: linear-gradient(90deg, #ffb6ec 0%, #b6eaff 100%);
+	color: #222;
+	border: none;
+	border-radius: 30px;
+	padding: 0.8rem 2.2rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+	cursor: pointer;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+.welcome-btn:hover {
+	transform: scale(1.07);
+	box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+}
+
+.sparkles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+	pointer-events: none;
+}
+.sparkle {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: radial-gradient(circle, #fff6f6 60%, #ffb6ec 100%);
+	border-radius: 50%;
+	opacity: 0.7;
+	animation: sparkle-float 4s linear infinite;
+	left: calc(100vw * var(--x));
+	top: calc(100vh * var(--y));
+	animation-delay: calc(-4s * var(--delay));
+}
+
+@keyframes sparkle-float {
+	0% {
+		transform: translateY(0) scale(1);
+		opacity: 0.7;
+	}
+	50% {
+		transform: translateY(-40px) scale(1.2);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-80px) scale(0.8);
+		opacity: 0.5;
+	}
+}
+
+/* Randomize sparkle positions using nth-child selectors */
+.sparkle:nth-child(1) { --x: 0.05; --y: 0.12; --delay: 0.1; }
+.sparkle:nth-child(2) { --x: 0.15; --y: 0.22; --delay: 0.2; }
+.sparkle:nth-child(3) { --x: 0.25; --y: 0.18; --delay: 0.3; }
+.sparkle:nth-child(4) { --x: 0.35; --y: 0.28; --delay: 0.4; }
+.sparkle:nth-child(5) { --x: 0.45; --y: 0.14; --delay: 0.5; }
+.sparkle:nth-child(6) { --x: 0.55; --y: 0.32; --delay: 0.6; }
+.sparkle:nth-child(7) { --x: 0.65; --y: 0.19; --delay: 0.7; }
+.sparkle:nth-child(8) { --x: 0.75; --y: 0.25; --delay: 0.8; }
+.sparkle:nth-child(9) { --x: 0.85; --y: 0.11; --delay: 0.9; }
+.sparkle:nth-child(10) { --x: 0.95; --y: 0.29; --delay: 1.0; }
+.sparkle:nth-child(11) { --x: 0.08; --y: 0.38; --delay: 0.15; }
+.sparkle:nth-child(12) { --x: 0.18; --y: 0.42; --delay: 0.25; }
+.sparkle:nth-child(13) { --x: 0.28; --y: 0.36; --delay: 0.35; }
+.sparkle:nth-child(14) { --x: 0.38; --y: 0.48; --delay: 0.45; }
+.sparkle:nth-child(15) { --x: 0.48; --y: 0.34; --delay: 0.55; }
+.sparkle:nth-child(16) { --x: 0.58; --y: 0.52; --delay: 0.65; }
+.sparkle:nth-child(17) { --x: 0.68; --y: 0.39; --delay: 0.75; }
+.sparkle:nth-child(18) { --x: 0.78; --y: 0.45; --delay: 0.85; }
+.sparkle:nth-child(19) { --x: 0.88; --y: 0.31; --delay: 0.95; }
+.sparkle:nth-child(20) { --x: 0.98; --y: 0.49; --delay: 1.05; }
+.sparkle:nth-child(21) { --x: 0.12; --y: 0.62; --delay: 0.12; }
+.sparkle:nth-child(22) { --x: 0.22; --y: 0.72; --delay: 0.22; }
+.sparkle:nth-child(23) { --x: 0.32; --y: 0.68; --delay: 0.32; }
+.sparkle:nth-child(24) { --x: 0.42; --y: 0.78; --delay: 0.42; }
+.sparkle:nth-child(25) { --x: 0.52; --y: 0.64; --delay: 0.52; }
+.sparkle:nth-child(26) { --x: 0.62; --y: 0.82; --delay: 0.62; }
+.sparkle:nth-child(27) { --x: 0.72; --y: 0.69; --delay: 0.72; }
+.sparkle:nth-child(28) { --x: 0.82; --y: 0.75; --delay: 0.82; }
+.sparkle:nth-child(29) { --x: 0.92; --y: 0.61; --delay: 0.92; }
+.sparkle:nth-child(30) { --x: 0.99; --y: 0.79; --delay: 1.02; }

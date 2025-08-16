@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎂 Happy Birthday Parna! 🦋</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+        <!-- Entry Overlay -->
+        <div id="entryOverlay" class="birthday-intro">
+                <div class="birthday-date">22/08/2025</div>
+                <div class="flash-message">Hey Dear Parna 💖 … I made something special for you.</div>
+                <button id="beginJourneyBtn" style="padding: 1rem 2.5rem; font-size: 1.3rem; border-radius: 30px; background: linear-gradient(90deg,#ffb6ec,#b6eaff); color: #222; font-weight: bold; border: none; box-shadow: 0 2px 12px rgba(0,0,0,0.18); cursor: pointer; margin-top: 30px;">Tap to Begin the Journey 🎁</button>
+                <div id="sparkleContainer"></div>
+        </div>
+        <script>
+            // Sparkle animation
+            const sparkleContainer = document.getElementById('sparkleContainer');
+            for(let i=0;i<30;i++){
+                const s=document.createElement('div');
+                s.className='sparkle';
+                s.style.left=(Math.random()*100)+'vw';
+                s.style.top=(Math.random()*100)+'vh';
+                s.style.animationDelay=(Math.random()*4)+'s';
+                sparkleContainer.appendChild(s);
+            }
+            // Hide overlay on button click
+            document.getElementById('beginJourneyBtn').onclick=function(){
+                document.getElementById('entryOverlay').style.display='none';
+            };
+        </script>
+        <!-- Background Animation Elements -->
+    <div class="background-container">
+        <div class="butterfly butterfly-1"></div>
+        <div class="butterfly butterfly-2"></div>
+        <div class="butterfly butterfly-3"></div>
+        <div class="butterfly butterfly-4"></div>
+        <div class="butterfly butterfly-5"></div>
+        <div class="floating-flower flower-1">🌸</div>
+        <div class="floating-flower flower-2">🌺</div>
+        <div class="floating-flower flower-3">🌼</div>
+        <div class="floating-flower flower-4">🌻</div>
+        <div class="light-particle particle-1"></div>
+        <div class="light-particle particle-2"></div>
+        <div class="light-particle particle-3"></div>
+        <div class="light-particle particle-4"></div>
+        <div class="light-particle particle-5"></div>
+    </div>
+
+    <!-- Audio Control -->
+    <div class="audio-control">
+        <button id="audioToggle" class="audio-btn">🔊</button>
+        <audio id="backgroundMusic" loop>
+            <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+        </audio>
+    </div>
+
+    <!-- Stage 1: Quiz Page -->
+    <div id="quizStage" class="stage active">
+        <div class="container">
+            <button id="startOverQuiz" class="btn btn-primary" style="position:absolute;top:20px;left:20px;z-index:100;">Start Over</button>
+            <div class="greeting">
+                <h1 class="title">Let's see how well you know our friendship 💖</h1>
+                <div class="timer-container">
+                    <div class="timer">⏰ <span id="quizTimer">3:00</span></div>
+                </div>
+            </div>
+            
+            <div id="quizContent" class="quiz-content">
+                <div class="question-container">
+                    <h2 id="questionText" class="question"></h2>
+                    <div class="options">
+                        <button class="option" data-correct="false"></button>
+                        <button class="option" data-correct="false"></button>
+                        <button class="option" data-correct="false"></button>
+                        <button class="option" data-correct="false"></button>
+                    </div>
+                </div>
+                <div class="progress">
+                    <span id="currentQuestion">1</span> / 5
+                </div>
+            </div>
+
+            <div id="quizResult" class="quiz-result hidden">
+                <h2 id="resultMessage"></h2>
+                <button id="retryQuiz" class="btn btn-primary">Retry Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stage 2: Puzzle Page -->
+    <div id="puzzleStage" class="stage">
+        <div class="container">
+            <button id="startOverPuzzle" class="btn btn-primary" style="position:absolute;top:20px;left:20px;z-index:100;">Start Over</button>
+            <h1 class="title">🧩 Uncover the Memory</h1>
+            <div class="timer-container">
+                <div class="timer">⏰ <span id="puzzleTimer">2:00</span></div>
+            </div>
+            
+            <div class="puzzle-container">
+                <div class="puzzle-instructions">
+                    <p>🧩 Flip the squares to reveal our moment together!</p>
+                    <p>💡 Each tile hides part of the photo – flip them all to see the whole memory!</p>
+                </div>
+                <div id="puzzleStatus" class="puzzle-status">Loading puzzle...</div>
+                <div id="puzzleBoard" class="puzzle-board"></div>
+            </div>
+
+            <div id="puzzleResult" class="puzzle-result hidden">
+                <h2 id="puzzleResultMessage"></h2>
+                <button id="retryPuzzle" class="btn btn-primary">Retry Puzzle</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stage 3: Final Message & Gallery -->
+    <div id="finalStage" class="stage">
+        <div class="container">
+            <button id="startOverFinal" class="btn btn-primary" style="position:absolute;top:20px;left:20px;z-index:100;">Start Over</button>
+            <div class="final-content">
+                <div class="message-section">
+                    <h1 class="title">🎂 Happy Birthday Parna! 🦋</h1>
+                    <div id="personalMessage" class="personal-message"></div>
+                </div>
+                
+                <div class="gallery-section">
+                    <div class="gallery-left">
+                        <div class="image-carousel">
+                            <div class="carousel-container" id="galleryLeft"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-right">
+                        <div class="image-carousel">
+                            <div class="carousel-container" id="galleryRight"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="startAgain" class="btn btn-primary start-again-btn">Start Again 💫</button>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Loading your magical journey... ✨</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+        <script>
+        // Dynamically load images from config.json and auto-roll them
+        fetch('config.json')
+            .then(response => response.json())
+            .then(CONFIG => {
+                // Combine all images for random selection
+                const allImages = [...CONFIG.gallery.leftImages, ...CONFIG.gallery.rightImages];
+                function getRandomImages(arr, count, exclude=[]) {
+                    const pool = arr.filter(img => !exclude.includes(img));
+                    const shuffled = pool.sort(() => Math.random() - 0.5);
+                    return shuffled.slice(0, count);
+                }
+                // For left: first 3 fixed, next 3 random
+                const leftFixed = CONFIG.gallery.leftImages.slice(0, 3);
+                const leftRandom = getRandomImages(allImages, 3, leftFixed);
+                const leftImages = [...leftFixed, ...leftRandom];
+                // For right: first 2 fixed, next 3 random
+                const rightFixed = CONFIG.gallery.rightImages.slice(0, 2);
+                const rightRandom = getRandomImages(allImages, 3, rightFixed);
+                const rightImages = [...rightFixed, ...rightRandom];
+                const galleryLeft = document.getElementById('galleryLeft');
+                const galleryRight = document.getElementById('galleryRight');
+                if (galleryLeft) {
+                    galleryLeft.innerHTML = leftImages.map((src, i) => `<img src="${src}" alt="Memory ${i+1}" class="memory-img">`).join('');
+                }
+                if (galleryRight) {
+                    galleryRight.innerHTML = rightImages.map((src, i) => `<img src="${src}" alt="Memory ${i+leftImages.length+1}" class="memory-img">`).join('');
+                }
+
+                // Enhanced rolling effect with fade transition
+                function rollImages(container, images) {
+                    if (!container) return;
+                    let currentImg, nextImg;
+                    let idx = 0;
+
+                    // Create and append two image elements
+                    container.innerHTML = `
+                        <img src="${images[0]}" alt="Memory 1" class="memory-img" style="opacity: 1; position: absolute;">
+                        <img src="${images[1]}" alt="Memory 2" class="memory-img" style="opacity: 0; position: absolute;">
+                    `;
+                    [currentImg, nextImg] = container.children;
+
+                    setInterval(() => {
+                        // Update source of next image
+                        idx = (idx + 1) % images.length;
+                        nextImg.src = images[idx];
+                        nextImg.alt = `Memory ${idx + 1}`;
+
+                        // Fade transition
+                        currentImg.style.opacity = '0';
+                        nextImg.style.opacity = '1';
+
+                        // Swap references
+                        [currentImg, nextImg] = [nextImg, currentImg];
+                    }, 5000); // Show each image for 5 seconds
+                }
+                
+                // Position containers for absolute positioning
+                galleryLeft.style.position = 'relative';
+                galleryRight.style.position = 'relative';
+                
+                rollImages(galleryLeft, leftImages);
+                rollImages(galleryRight, rightImages);
+            });
+        </script>
+</body>
+</html> 
